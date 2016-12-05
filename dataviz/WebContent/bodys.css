@@ -1,0 +1,11 @@
+img.resize{
+    width:540px; /* you can use % */
+    height: auto;
+}
+.container {
+	width:400px;
+	height: 300px;
+}
+.donut-example svg {
+	height: 100px;
+}
