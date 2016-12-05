@@ -9,3 +9,11 @@ img.resize{
 .donut-example svg {
 	height: 100px;
 }
+
+.hide-element {
+	display: none;
+}
+
+.show-element {
+	display: block;
+}
