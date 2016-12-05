@@ -41,6 +41,8 @@ $(document).ready(function() {
     });
     chart.render();
 
+    $('.canvasjs-chart-credit').remove();
+
     maleBody.on('click', function(e) {
         var tags = [];
         var currEle = $(e.target);
@@ -128,7 +130,7 @@ function toggleMale(bodyPart) {
     if (selectedBodyParts.indexOf(bodyPart) === -1) {
         // Change color here
         let parts = description["male"][bodyPart];
-        $('.modal-body').children().remove();
+        $('#myModal .modal-body').children().remove();
         var container = document.createElement("div");
         for (p in parts) {
             let partDiv = document.createElement("div");
@@ -155,7 +157,7 @@ function toggleMale(bodyPart) {
             partDiv.appendChild(partLabel);
             container.appendChild(partDiv);
         }
-        $('.modal-body').append(container);
+        $('#myModal .modal-body').append(container);
         $('#myModal').modal('toggle');
         // Add to the selected list
         selectedBodyParts.push(bodyPart);
