@@ -21,7 +21,9 @@ function addBodyPart (label) {
 $(document).ready( function() {
   var maleBody = $('#maleBody g path');
   var femaleBody = $('#femaleBody g path');
+
   maleBody.on('click', function(e) {
+        var tags = [];
     var currEle = $(e.target);
     var currVal = currEle[0].getAttribute('fill-opacity');
     toggleMale(currEle[0].getAttribute("value"))
@@ -30,8 +32,23 @@ $(document).ready( function() {
     } else {
       currEle[0].setAttribute('fill-opacity', 0.4);
     }
+
+
+     $('#selected-tags').children().remove();
+  var tempArr = $( '#maleBody g path' );
+  for (var i = 0; i < tempArr.length; i++) {
+    var currFill = tempArr[i].getAttribute('fill-opacity');
+    var currVal = tempArr[i].getAttribute('value');
+    if (currFill == 0.4) {
+      tags.push(currVal);
+    }
+  }
+  generateTags(tags);
+
   });
+
   femaleBody.on('click', function(e) {
+        var tags = [];
     var currEle = $(e.target);
     var currVal = currEle[0].getAttribute('fill-opacity');
     toggleFemale(currEle[0].getAttribute("value"))
@@ -40,8 +57,36 @@ $(document).ready( function() {
     } else {
       currEle[0].setAttribute('fill-opacity', 0.4);
     }
+
+ $('#selected-tags').children().remove();
+  var tempArr = $( '#femaleBody g path' );
+  for (var i = 0; i < tempArr.length; i++) {
+    var currFill = tempArr[i].getAttribute('fill-opacity');
+    var currVal = tempArr[i].getAttribute('value');
+    if (currFill == 0.4) {
+      tags.push(currVal);
+    }
+  }
+  generateTags(tags);
+
   });
+
+function generateTags(parts) {
+
+  var parent = $('#selected-tags');
+  for (var i=0; i<parts.length; i++) {
+    var tag = $("<span></span>").addClass('tag tag-default');
+    tag.text(parts[i]);
+    parent.append(tag);
+  }
+}
+
+
+
 });
+
+
+
 
 function toggleMale(bodyPart) {
   if(bodyPart === 'larm' || bodyPart === 'rarm')
