@@ -156,7 +156,7 @@ function toggleMale(bodyPart) {
             container.appendChild(partDiv);
         }
         $('.modal-body').append(container);
-        $('.modal').modal('toggle');
+        $('#myModal').modal('toggle');
         // Add to the selected list
         selectedBodyParts.push(bodyPart);
     } else {
