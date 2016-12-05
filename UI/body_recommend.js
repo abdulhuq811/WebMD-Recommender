@@ -145,19 +145,19 @@ function toggleFemale(bodyPart) {
 
 function invokeBodyChange () {
   var obj = {};
-  obj['gender'] = 'm';//gender;
+  obj['gender'] = selectedGender;
   obj['bodyParts'] = selectedBodyParts;
   // Whenever the list of body parts changes, this will get called.
   $.ajax({
       url: 'http://192.168.0.18:8083/dataviz_project/internalgui/getdetail',
       type: 'POST',
       data: obj, // or $('#myform').serializeArray()
-      success: function(result) { alert(result); }
+      success: function(result) { colorBodyParts(selectedGender, result); }
   });
 }
 
 function colorBodyParts(gender, bodyParts) {
-
+  // On recieving recommendations, color body parts
 }
 
 Morris.Donut({
