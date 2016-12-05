@@ -2,12 +2,10 @@
     width: 90%;
     min-height: 764px;
     margin: 10px auto;
-    border: 1px solid;
 }
 
 .header {
 	width: 100%;
-	border-bottom: 1px solid;
 	margin: 0 auto;
 }
 
@@ -17,7 +15,7 @@
 }
 
 .left-div {
-	border-right: 1px solid;
+	text-align: center;
 	height: 718px;
 	padding:0;
 }
@@ -27,12 +25,10 @@
 	min-height: 25px;
     margin: 10px 0px;
     padding-left: 10px;
-	border-bottom: 1px solid;
 }
 
 .img-1 {
 	min-height: 400px;
-	border-bottom: 1px solid;
 	text-align: center;
 }
 
@@ -40,7 +36,6 @@
 	min-height: 25px;
     margin: 15px 0px;
     padding-left: 10px;
-    border-bottom: 1px solid;
 }
 
 .search-items {
@@ -80,13 +75,12 @@
 }
 
 .mid-div {
-	border-right: 1px solid;
 	height: 718px;
 	padding: 0
 }
 
 .pie-chart, .search-items2, .search-items3 {
-	border-bottom: 1px solid;
+	/*border-bottom: 1px solid;*/
 }
 
 .pie-chart {
@@ -108,7 +102,7 @@
 .search-items3 {
 	min-height: 235px;
     padding: 10px;
-	border-bottom: 0px;
+	/*border-bottom: 0px;*/
 }
 
 .mid-div #ex-tab1{
