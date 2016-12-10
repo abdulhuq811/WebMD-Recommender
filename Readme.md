@@ -15,4 +15,16 @@ psql -U <username> < <dumpFilePath>
 ```
 2. Open the project in eclipse, start the server.
 
-## Examples
+## Contributors
+[Guru Vignesh Balasubramanian] (https://github.com/guruvignesh-b)
+
+[Mohamed Abdul Huq Ismail] (https://github.com/abdulhuq811)
+
+[Prashanth Rajasankar] (https://github.com/rabn)
+
+[Rangaraj Kaushik Sundar] (https://github.com/RangarajKaushikSundar)
+
+## References
+[1] http://www.webmd.com/
+
+[2] http://www.salemmarafi.com/code/collaborative-filtering-with-python/
