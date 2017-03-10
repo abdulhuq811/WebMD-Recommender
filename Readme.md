@@ -24,6 +24,8 @@ psql -U <username> < <dumpFilePath>
 
 [Rangaraj Kaushik Sundar] (https://github.com/RangarajKaushikSundar)
 
+[Sriram Poondi Chinappa] (https://github.com/srirampoondichinappa)
+
 ## References
 [1] http://www.webmd.com/
 
